@@ -1,122 +1,131 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-		<title>Class 3 ~ JavaScript for Beginners ~ Girl Develop It</title>
+    <title>Class 3 ~ JavaScript for Beginners ~ Girl Develop It</title>
 
-		<meta name="description" content="This is an introduction to JavaScript curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.
+    <meta name="description" content="This is an introduction to JavaScript curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.
 
         The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
-		<meta name="author" content="Girl Develop It">
+    <meta name="author" content="Girl Develop It">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
-		<link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
 
-		<!-- For syntax highlighting -->
-		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+    <!-- For syntax highlighting -->
+    <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+    <!-- dark editor-->
+    <link rel="stylesheet" href="reveal/lib/css/dark.css">
 
-		<!-- If use the PDF print sheet so students can print slides-->
-		
-		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+    <!-- If use the PDF print sheet so students can print slides-->
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
-	<body>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
 
-		<div class="reveal">
-		<!-- Any section element inside of this container is displayed as a slide -->
-		<div class="slides">
-             <section>
+<body>
+
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
                 <img src="images/gdi_logo_badge.png" alt="GDI logo">
                 <h3>JavaScript for Beginners</h3>
-                <h4>Class 3</h4>
+                <h4>Class 3 - Objects & The Magical Magic of Functions</h4>
             </section>
-   
+
 
             <section>
-			  <h3>Objects</h3>
-			  <p>Objects let us store a collection of properties.</p>
-              <pre><code>
-var objectName = { 
-  propertyName: propertyValue,
-  propertyName: propertyValue,
-  ...
-};
-			  </code></pre>
-              <pre><code>
-var aboutMe = {
-  hometown: 'Atlanta, GA',
-  hair: 'Auburn',
-  likes: ['knitting', 'code'],
-  birthday: {month: 10, day: 17}
-}; 
-			  </code></pre>
-			</section>
+                <h3>Objects</h3>
+                <p>Objects let us store a collection of properties.</p>
+                <pre><code>
+                  var objectName = {
+                    propertyName: propertyValue,
+                    propertyName: propertyValue,
+                    ...
+                  };
+                </code></pre>
+                <p>Properties can be any data type (Number, Strings, Boolean, Arrays, Functions, even other objects)</p>
+                <pre><code>
+                  var aboutMe = {
+                    hometown: 'Atlanta, GA',
+                    hair: 'Auburn',
+                    likes: ['knitting', 'code'],
+                    birthday: {month: 10, day: 17}
+                  };
+                </code></pre>
+            </section>
             <section>
-			  <h3>Accessing Objects</h3>
-			  <p>You can retrieve values using "dot notation"</p>
-              <pre><code>
-var aboutMe = {
-  hometown: 'Atlanta, GA',
-  hair: 'Auburn'
-}; 
-var myHometown = aboutMe.hometown;
-			  </code></pre>
-              <p>Or using "bracket notation" (like arrays)</p>
-              <pre><code>
-var myHair = aboutMe['hair'];
-			  </code></pre>
-			</section>
+                <h3>Accessing Objects</h3>
+                <p>You can retrieve values using "dot notation"</p>
+                <pre><code>
+                  var aboutMe = {
+                    hometown: 'Atlanta, GA',
+                    hair: 'Auburn'
+                  };
+                  var myHometown = aboutMe.hometown;
+                </code></pre>
+                <p>Or using "bracket notation" using the property's key (like arrays)</p>
+                <pre><code>
+                  var myHair = aboutMe['hair'];
+                </code></pre>
+            </section>
             <section>
-			  <h3>Changing Objects</h3>
-			  <p>You can use dot or bracket notation to change properties</p>
-              <pre><code>
-var aboutMe = {
-  hometown: 'Atlanta, GA',
-  hair: 'Auburn'
-}; 
-aboutMe.hair = 'blue';
-			  </code></pre>
-              <p>Add new properties</p>
-              <pre><code>
-aboutMe.gender = 'female';
-			  </code></pre>
-              <p>Or delete them</p>
-              <pre><code>
-delete aboutMe.gender;
-			  </code></pre>
-			</section>
+                <h3>Changing Objects</h3>
+                <p>You can use dot or bracket notation to change properties</p>
+                <pre><code>
+                  var aboutMe = {
+                    hometown: 'Atlanta, GA',
+                    hair: 'Auburn'
+                  };
+                  aboutMe.hair = 'blue';
+                </code></pre>
+                <p>Add new properties</p>
+                <pre><code>
+                  aboutMe.gender = 'female';
+                  aboutMe["gender"] = 'female';
+                </code></pre>
+                <p>Or delete them</p>
+                <pre><code>
+                  delete aboutMe.gender;
+                  delete aboutMe["gender"];
+                </code></pre>
+            </section>
             <section>
-			  <h3>Arrays of Objects</h3>
-			  <p>Since arrays can hold any data type, they can also hold objects</p>
-              <pre><code>
+                <h3>Arrays of Objects</h3>
+                <p>Since arrays can hold any data type, they can also hold objects</p>
+                <pre>
+                  <code>
 var myCats = [
-  {name: 'Lizzie', 
+  {name: 'Lizzie',
    age: 18},
   {name: 'Daemon',
    age: 1}
 ];
 
-for (var i = 0; i &lt; myCats.length; i++) {
+for (var i = 0; i < myCats.length; i++) {
   var myCat = myCats[i];
   console.log(myCat.name + ' is ' + myCat.age + ' years old.');
 }
-			  </code></pre>
-			</section>
+=> 'Lizzie is 18 years old.'
+=> 'Daemon is 1 years old.'
+                  </code>
+                </pre>
+            </section>
             <section>
-			  <h3>Arrays of Objects</h3>
-			  <p>Just like other data types, objects can be passed into functions:</p>
-              <pre><code>
+                <h3>More about Objects</h3>
+                <p>Just like other data types, objects can be passed into functions:</p>
+                <pre>
+                  <code>
 var lizzieTheCat = {
   age: 18,
   furColor: 'grey',
@@ -125,23 +134,26 @@ var lizzieTheCat = {
 }
 
 function describeCat(cat) {
-  console.log('This cat is ' + cat.age + ' years old with ' + cat.furColor + ' fur.');
+  console.log('This cat is ' + cat.age + ' years old with ' +
+  &nbsp; &nbsp; cat.furColor + ' fur.');
 }
 
 describeCat(lizzieTheCat);
-			  </code></pre>
-			</section>
+=> 'This cat is 18 years old with grey fur.'
+                  </code>
+                </pre>
+            </section>
             <section>
-				<h3>Let's Develop It</h3>
+                <h3>Let's Develop It</h3>
                 <p>Create an object to hold information on your favorite recipe. It should have properties for recipeTitle (a string), servings (a number), and ingredients (an array of strings).</p>
                 <p>Try displaying some information about your recipe.</p>
                 <p>Bonus: Create a loop to list all the ingredients.</p>
-			</section> 
+            </section>
 
             <section>
-              <h3>Object methods</h3>
-			  <p>Objects can also hold functions.</p>
-              <pre><code>
+                <h3>Object methods</h3>
+                <p>Objects can also hold functions.</p>
+                <pre><code>
 var lizzieTheCat = {
   age: 18,
   furColor: 'grey',
@@ -149,319 +161,360 @@ var lizzieTheCat = {
     console.log('meowww');
   },
   eat: function(food) {
-    console.log('Yum, I love ' + food);  
+    console.log('Yum, I love ' + food);
   },
 };
-			  </code></pre>
-              <p>Call object methods using dot notation:</p>
-              <pre><code>
+        </code></pre>
+                <p>Call object methods using dot notation:</p>
+                <pre><code>
 lizzieTheCat.meow();
 lizzieTheCat.eat('brown mushy stuff');
-			  </code></pre>
-            </section>            
+        </code></pre>
+            </section>
             <section>
-              <h3>Built-in methods</h3>
-              <p>JS provides several built-in objects:</p>
-              <ul>
-                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array">Array</a></code></li>
-                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code></li>
-                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number">Number</a></code></li>
-                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">String</a></code></li>
-                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/RegExp">RegExp</a></code></li>
-                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date">Date</a></code></li>
-                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Math">Math</a></code></li>
-              </ul>
+                <h3>Built-in methods</h3>
+                <p>JS provides several built-in objects:</p>
+                <ul>
+                    <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array">Array</a></code>
+                    </li>
+                    <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code>
+                    </li>
+                    <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number">Number</a></code>
+                    </li>
+                    <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">String</a></code>
+                    </li>
+                    <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/RegExp">RegExp</a></code>
+                    </li>
+                    <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date">Date</a></code>
+                    </li>
+                    <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Math">Math</a></code>
+                    </li>
+                </ul>
             </section>
 
-			<section>
-			  <h3>Review: Anatomy of a website</h3>
-			  <div class = "blue"> Your Content</div>
-			  <div><span class = "blue">+ HTML: </span>Structure</div>
-			  <div><span class = "blue">+ CSS: </span>Presentation</div>
-			  <div class = "blue">= Your Website</div>
-			  <p>A website is a way to present your content to the world, using HTML and CSS to present that content &amp; make it look good.</p>
-			</section>
+            <!-- Functions revisted -->
+            <section>
+              <h2>More about functions!</h2>
+              <br><br><br>
+              <p>Functions are the life blood of JavaScript, so we're going to spend a little more time with them to demonstrate their power and versitility.</p>
+            </section>
 
             <section>
-			<h3>IDs vs. Classes</h3>
-				<div class = "left-align">
-				  <span class = "yellow">ID</span> -- Should only apply to one element on a webpage, e.g., A webpage only has one footer.
-				  <p>The "#" is how you tell CSS "this is an id."</p>
-				</div>
-				<div class = "left-align">
-				  <span class = "yellow">Class</span> -- Lots of elements can have the same class, e.g., There can be many warnings on one webpage.
-				  <p>The "." is how you tell CSS "this is a class name."</p>
-				</div>
-			</section>
-	
+              <h2>In JavaScript, Functions are first-class objects!</h2>
+              <p>That means they are objects and can be used in any of the same ways objects can.</p>
+              <p>
+                <ul>
+                  <li>Stored in variables</li>
+                  <li>Passed as arguments to functions</li>
+                  <li>Created within functions</li>
+                  <li>Returned from a function</li>
+                </ul>
+              </p>
+            </section>
 
             <section>
-              <h3>The DOM Tree</h3>
-              <p>We model the nested structure of an HTML page with the DOM (Document Object Model) Tree. The browser makes a "map" of all the elements on a page.</p>
+              <h2>Stored in variables you say?!</h2>
+              <p>Yep, and then called similarly to the way you would call a function declared normally</p>
+
+              <pre>
+               <code>
+                  var allAboutThatBass = function() {
+                    console.log('no treble');
+                  };
+
+                  allAboutThatBass();
+                  => 'no treble'
+               </code>
+              </pre>
+            </section>
+
+            <section>
+              <h2>Wait a tick, that function didn't have a name!</h2>
+              <br><br>
+              <p>As it turns out naming a function isn't strictly required. This is called an Anonymous Function.</p>
+              <br>
+              <p>Most often, you'll do this when a function is going to be called in-place or when providing it as a callback (more on that in a minute).</p>
+              <br>
+              <p>The function does have a name, it was the variable name. Still, it's possible to declare functions without names. That's important to remember.</p>
+
+            </section>
+
+            <section>
+                <h3>Let's Develop It</h3>
+                <p>Create a function that is stored in a variable to do something simple like say 'hello'.</p>
+                <p>Try calling that function</p>
+            </section>
+
+            <section>
+              <h2>Functions can be passed as arguments to other functions?!</h2>
+              <br>
+              <p>Yes! These are called Lambdas (impress your friends with that little gem).</p>
+              <br>
+              <p>This is one of the most powerful features in JavaScript. Until recently JS was one of the only popular langauges that could do this. In recent years these kinds of functions are popping in all kinds of languages like Python, Ruby(?), even Java</p>
+            </section>
+
+            <section>
+              <h4>This can work a couple of different ways. Let's look at them both.</h4>
+              <p>Passing a pre-defined function as an argument</p>
+              <pre>
+                <code>
+var secondLyric = function() {
+  return "when we're dancing on the ceiling";
+};
+
+function finishThisLyric(firstLyric, someFunction){
+  console.log(firstLyric, someFunction());
+}
+
+finishThisLyric('oh what a feeling', secondLyric);
+
+=> 'oh what a feeling'
+=> 'when we're dancing on the ceiling'
+                </code>
+              </pre>
+            </section>
+
+            <section>
+              <p>Defining a function in-line.</p>
+              <pre>
+                <code>
+function finishThisLyric(firstLyric, callback) {
+  console.log(firstLyric);
+  callback();
+}
+
+finishThisLyric("It's the", function(){
+  console.log("eye of the tiger it's the thrill of the fight!");
+});
+
+=> "It's the"
+=> "eye of the tiger it's the thrill of the fight!"
+                </code>
+              </pre>
+              <p><a href="http://jsbin.com/yexavagule/5/edit">Demo!</a></p>
+            </section>
+
+            <section>
+              <h3>Let's Develop It</h3>
+              <p>Let's use one of JavaScript's built in object methods Array.forEach() to demonstrate using inline functions.</p>
+              <br>
+              <p>Array.forEach() is an easier way to iterate over an array and do stuff. All you have to do is pass forEach() a function that does what you want it to do to each element in the array (<i>which is passed to your function</i>). No need to use a for loop!</p>
             </section>
             <section>
-              <h3>The DOM: Sample Code</h3>
-                <pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;Test Page&lt;/title&gt;
-        &lt;style&gt;
-            h1 {
-             color: red;
-            }
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;My Page&lt;/h1&gt;
-        &lt;p&gt;Hello World!&lt;/p&gt;
-        &lt;img src="http://placekitten.com/200/300" alt="cat"/&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-				</code></pre>
+              <h4>Like so!</h4>
+              <pre>
+                <code>
+                  var rainbowColors = [
+                    'red',
+                    'orange',
+                    'yellow',
+                    'green',
+                    'blue',
+                    'indigo',
+                    'violet'
+                  ];
+
+                  rainbowColors.forEach(function(color){
+                    console.log(color);
+                  });
+                  => 'red, orange, yellow, green, blue, indigo, violet'
+                </code>
+              </pre>
             </section>
+
             <section>
-              <h3>The DOM: Sample Model</h3>
-              <img src="images/dom-tree.png" alt="Simple DOM Tree"/>
-            </section>
-          
-        <!--Accessing the DOM-->
-  
-            <section>
-              <h3>DOM Access</h3>
-              <p>Your browser automatically builds a Document object to store the DOM of a page. To change a page:</p>
+              <h4>Now it's your turn</h4>
+              <br>
               <ol>
-                <li>Find the DOM node and store it in a variable</li>
-                <li>Use methods to manipulate the node</li>
+                <li>Define an array of numbers listing all the digits from 1 to 10</li>
+                <li>Now call forEach() on that array and define an inline function that multiplies each element by 5 and logs the result.</li>
+                <li>Bonus: Define an function as a variable and pass it into forEach() instead of defining it inline.</li>
               </ol>
             </section>
+
             <section>
-              <h3>DOM Access: By Id</h3>
-              <p>You can find nodes by id using the method:</p>
-              <pre><code>
-document.getElementById(id);
-			  </code></pre>
-              <p>To find:</p>
-              <pre><code>
-&lt;img id="kittenPic" src="http://placekitten.com/200/300" alt="cat"/&gt;
-			  </code></pre>
-              <p>We would use:</p>
-              <pre><code>
-var imgKitten = document.getElementById('kittenPic');
-			  </code></pre>
+              <p>A possible solution</p>
+              <pre>
+                <code>
+                var demDigits = [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ];
+
+
+                demDigits.forEach(function(digit){
+                  console.log(digit * 5);
+                });
+                => 5, 10, 15, 20, 25
+                </code>
+              </pre>
+            </section>
+
+            <section>
+              <h4>Know what else can be defined inline?</h4>
+              <p>Arrays and Objects</p>
+              <br>
+              <p>Consider these</p>
+              <pre>
+                <code>
+                  var fiftyWays = {
+                    jack: 'step out the back',
+                    stan: 'make a new plan',
+                    gus: 'hop on the bus'
+                  }
+
+                  function waysToLeaveYourLove(fiftyWays) {
+                    console.log(fiftyWays.jack)
+                  }
+                  => 'step out the back'
+                </code>
+              </pre>
+            </section>
+
+            <section>
+              <p>Now consider</p>
+              <pre>
+                <code>
+                  function waysToLeaveYourLever(waysObject) {
+                    console.log(waysObject.stan);
+                  }
+
+                  waysToLeaveYourLover({
+                    jack: 'step out the back',
+                    stan: 'make a new plan',
+                    gus: 'hop on the bus'
+                  });
+                  => 'make a new plan'
+                </code>
+              </pre>
+              <a href="http://jsbin.com/zoxafo/8/edit?js,console">Demo</a>
+            </section>
+
+            <section>
+              <h3>Let's Develop It</h3>
+              <br><br><br>
+              <p>Let's call some functions that take objects as arguments and define those objects inline</p>
             </section>
             <section>
-              <h3>DOM Access: By Tag Name</h3>
-              <p>You can certain types of HTML elements using this method:</p>
-              <pre><code>
-document.getElementsByTagName(tagName);
-			  </code></pre>
-              <p>To find:</p>
-              <pre><code>
-&lt;li&gt;Daisy&lt;/li&gt;
-&lt;li&gt;Tulip&lt;/li&gt;
-			  </code></pre>
-              <p>We would use:</p>
-              <pre><code>
-var listItems = document.getElementsByTagName('li');
-for (var i =0; i &lt; listItems.length; i++) {
-  var listItem = listItems[i];
+              <h4>Inline objects!</h4>
+              <ol>
+                <li>Copy the function below into your text editor. By now you should be able to look at it and know <i>roughly</i> what it's doing (if you don't raise your hand).</li>
+                <li>Call the function using inline object literals at least twice. Your objects must contain 'name' and 'age' keys or your code will poo itself.</li>
+              </ol>
+              <pre>
+                <code>
+function describePetsOrKids(petOrKid) {
+  console.log(petOrKid.name + " is " + petOrKid.age + " years old.");
 }
-			  </code></pre>
-            </section>
-            <section>
-              <h3>DOM Access: HTML 5</h3>
-              <p>In newer browsers, you can use other methods too.</p>
-              <p>Available in <a href="http://caniuse.com/#search=getElementsByClassName">IE9+, FF3.6+, Chrome 17+, Safari 5+</a>:</p>
-              <pre><code>
-document.getElementsByClassName(className);
-			  </code></pre>
-              <p>Available in <a href="http://caniuse.com/#search=querySelectorAll">IE8+, FF3.6+, Chrome 17+, Safari 5+</a>:</p>
-              <pre><code>
-document.querySelector(cssQuery);
-document.querySelectorAll(cssQuery);
-			  </code></pre>
-            </section>
-            <section>
-              <h3>getElement vs. getElements</h3>
-              <p>Any method that starts with "getElement" will return a <span class = "blue">single</span> node.</p>
-              <pre><code>
-document.getElementById('uniqueID'); //returns a single node
-			  </code></pre>
-              <p>Any method that starts with "getElements" will return a <span class = "blue">array</span> of nodes. To modify a single node, you will need to use bracket notation to select the correct one.</p>
-              <pre><code>
-document.getElementsByTagName('p'); //returns multiple nodes
-var specficParagraph = document.getElementsByTagName('p')[2];
-			  </code></pre>
+                </code>
+              </pre>
             </section>
 
             <section>
-              <h3>DOM Nodes: Attributes</h3>
-              <p>You can access and change attributes of DOM nodes using dot notation.</p>
-              <p>To change this element:</p>
-              <pre><code>
-&lt;img id="kittenPic" src="http://placekitten.com/200/300" alt="cat"/&gt;
-			  </code></pre>
-              <p>We could change the src attribute this way:</p>
-              <pre><code>
-var imgKitten = document.getElementById('kittenPic');
-var oldSrc = imgKitten.src;
-imgKitten.src = 'http://placekitten.com/100/500';
-			  </code></pre>
+              <p>A possible solution</p>
+              <pre>
+                <code>
+                describePetsOrKids({
+                  name: 'Evie',
+                  age: '5'
+                });
+
+
+                describePetsOrKids({
+                  name: 'Mouse',
+                  age: '3'
+                });
+
+                => 'Evie is 5 years old'
+                => 'Mouse is 3 years old'
+                </code>
+              </pre>
             </section>
+
             <section>
-              <h3>DOM Nodes: Getting and Setting Attributes</h3>
-              <p>You can also use <code>getAttribute/setAttribute</code></p>
-              <pre><code>
-&lt;img id="kittenPic" src="http://placekitten.com/200/300" alt="cat"/&gt;
-			  </code></pre>
-              <p>We could change the src attribute this way:</p>
-              <pre><code>
-var imgKitten = document.getElementById('kittenPic');
-var oldSrc = imgKitten.getAttribute('src');
-imgKitten.setAttribute('src', 'http://placekitten.com/100/500');
-			  </code></pre>
+              <h1>Questions?</h1>
             </section>
+
             <section>
-              <h3>DOM Nodes: Styles</h3>
-              <p>You can change page css using<code>style</code></p>
-              <p>To make this CSS:</p>
-              <pre><code>
-body {
-  color: red;
-}
-			  </code></pre>
-              <p>Use this JavaScript:</p>
-              <pre><code>
-var pageNode = document.getElementsByTagName('body')[0];
-pageNode.style.color = 'red';
-			  </code></pre>
+              <h3>Resources</h3>
+                <ul>
+                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
+                  <li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li>
+                  <li><a href="http://www.amazon.com/JavaScript-JQuery-Interactive-Front-End-Development/dp/1118531647" target="_blank">JavaScript & jQuery</a> by John Duckett. <br>An excellent starter text for folks new to programming and JavaScript. Includes tutorials on jQuery as well.</li>
+                </ul>
             </section>
-            <section>
-              <h3>DOM Nodes: More Styles</h3>
-              <p>Change any CSS property with a "-" to camelCase, and be sure to include a unit on any number</p>
-              <p>To make this CSS:</p>
-              <pre><code>
-body {
-  background-color: pink;
-  padding-top: 10px;
-}
-			  </code></pre>
-              <p>Use this JavaScript:</p>
-              <pre><code>
-var pageNode = document.getElementsByTagName('body')[0]
-pageNode.style.backgroundColor = 'pink';
-pageNode.style.paddingTop = '10px';
-			  </code></pre>
-            </section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Create a simple HTML page or <a href="files/class3.zip">use this sample code</a>.</p>
-                <p>Isolate a node (an element on the page) and change an attribute or add a new style.</p> 
-			</section>       
-
-            <section>
-              <h3>DOM innerHTML</h3>
-              <p>Each DOM node has an <code>innerHTML</code> property with the HTML of all its children. You can use the property to view or change the HTML of a node.</p>
-              <p>For example, you can overwrite the entire body:</p>
-              <pre><code>
-var pageNode = document.getElementsByTagName('body')[0];
-pageNode.innerHTML = '&lt;h1&gt;Oh Noes!&lt;/h1&gt; &lt;p&gt;I just changed the whole page!&lt;/p&gt;'
-			  </code></pre>
-              <p>Or just add some new content to the end</p>
-              <pre><code>
-pageNode.innerHTML += '...just adding this bit at the end of the page.';
-			  </code></pre>
-            </section>
-            <section>
-              <h3>DOM innerHTML continued</h3>
-              <p>You can also target a particular element</p>
-              <p>To fill this HTML element:</p>
-              <pre><code>
-&lt;p id="warning"&gt;&lt;/p&gt;
-			  </code></pre>
-              <p>We can select the node and modify it</p>
-              <pre><code>
-var warningParagraph = document.getElementById('warning');
-warningParagraph.innerHTML = 'Danger Will Robinson!';
-			  </code></pre>
-            </section>
-            <section>
-              <h3>Creating New Nodes</h3>
-              <p>The <code>document</code> object also provides ways to create nodes from scratch:</p>
-              <pre><code>
-document.createElement(tagName);
-document.createTextNode(text);
-document.appendChild();
-			  </code></pre>
-            </section>
-            <section>
-              <h3>Creating New Nodes: Sample Code</h3>
-              <pre><code>
-var pageNode = document.getElementsByTagName('body')[0];
-
-var newImg = document.createElement('img');
-newImg.src = 'http://placekitten.com/400/300';
-newImg.style.border = '1px solid black';
-pageNode.appendChild(newImg);
-
-var newParagraph = document.createElement('p');
-var paragraphText = document.createTextNode('Squee!');
-newParagraph.appendChild(paragraphText);
-pageNode.appendChild(newParagraph);
-			  </code></pre>
-            </section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Create a new paragraph element and add it to a div on your page.</p>
-			</section> 
-			
-			<section>
-				<h3>Resources</h3>
-					<ul>
-						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
-						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li>
-					</ul>
-			</section>
- 
-			</div><!-- Close .slides -->
-  		<footer>
-        <div class="copyright">
-          JavaScript for Beginners ~ Girl Develop It ~
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
-        </div><!-- Close .copyright -->
-      </footer>
-    </div><!-- Close .reveal -->
 
 
-		<script src="reveal/lib/js/head.min.js"></script>
-		<script src="reveal/js/reveal.min.js"></script>
+        </div>
+        <!-- Close .slides -->
+        <footer>
+            <div class="copyright">
+                JavaScript for Beginners ~ Girl Develop It ~
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
+                </a>
+            </div>
+            <!-- Close .copyright -->
+        </footer>
+    </div>
+    <!-- Close .reveal -->
 
-		<script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-                touch: true,
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.min.js"></script>
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+    <script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        touch: true,
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
-		</script>
+        // Optional libraries used to extend on reveal.js
+        dependencies: [{
+            src: 'reveal/lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'reveal/plugin/markdown/showdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'reveal/plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'reveal/plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'reveal/plugin/zoom-js/zoom.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }, {
+            src: 'reveal/plugin/notes/notes.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }]
+    });
+    </script>
 
-	</body>
+</body>
+
 </html>
